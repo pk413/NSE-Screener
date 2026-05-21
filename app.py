@@ -496,13 +496,13 @@ KEY_METRICS = {
 
     "Enterprise Value": "enterpriseValue",
 
-    "Price To Earnings Ratio": "trailingPE",
+    "Price To Earnings Ratio (P/E)": "trailingPE",
 
     "Forward PE Ratio": "forwardPE",
 
     "PEG Ratio": "pegRatio",
 
-    "Price To Book Ratio": "priceToBook",
+    "Price To Book Ratio (P/B)": "priceToBook",
 
     "EPS (Trailing)": "trailingEps",
 
@@ -520,11 +520,11 @@ KEY_METRICS = {
 
     "Gross Margins": "grossMargins",
 
-    "Return On Equity": "returnOnEquity",
+    "Return On Equity (ROE)": "returnOnEquity",
 
-    "Return On Assets": "returnOnAssets",
+    "Return On Assets (ROA)": "returnOnAssets",
 
-    "Debt To Equity Ratio": "debtToEquity",
+    "Debt To Equity Ratio (D/E)": "debtToEquity",
 
     "Current Ratio": "currentRatio",
 
@@ -547,8 +547,6 @@ KEY_METRICS = {
     "52 Week High": "fiftyTwoWeekHigh",
 
     "52 Week Low": "fiftyTwoWeekLow",
-
-    "Analyst Recommendation": "recommendationKey",
 
     "Analyst Rating": "averageAnalystRating",
 
