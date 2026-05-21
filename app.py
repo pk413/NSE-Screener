@@ -360,6 +360,82 @@ def ai_signal(score):
     return "SELL"
 
 # ============================================================
+# DECISION MAKING METRICS
+# ============================================================
+
+KEY_METRICS = {
+
+    "Current Stock Price": "currentPrice",
+
+    "Market Capitalization": "marketCap",
+
+    "Enterprise Value": "enterpriseValue",
+
+    "Price To Earnings Ratio": "trailingPE",
+
+    "Forward PE Ratio": "forwardPE",
+
+    "PEG Ratio": "pegRatio",
+
+    "Price To Book Ratio": "priceToBook",
+
+    "EPS (Trailing)": "trailingEps",
+
+    "EPS (Forward)": "forwardEps",
+
+    "Book Value Per Share": "bookValue",
+
+    "Revenue Growth": "revenueGrowth",
+
+    "Earnings Growth": "earningsGrowth",
+
+    "Profit Margins": "profitMargins",
+
+    "Operating Margins": "operatingMargins",
+
+    "Gross Margins": "grossMargins",
+
+    "Return On Equity": "returnOnEquity",
+
+    "Return On Assets": "returnOnAssets",
+
+    "Debt To Equity Ratio": "debtToEquity",
+
+    "Current Ratio": "currentRatio",
+
+    "Quick Ratio": "quickRatio",
+
+    "Free Cash Flow": "freeCashflow",
+
+    "Operating Cash Flow": "operatingCashflow",
+
+    "Total Revenue": "totalRevenue",
+
+    "Net Income": "netIncomeToCommon",
+
+    "EBITDA": "ebitda",
+
+    "Total Debt": "totalDebt",
+
+    "Dividend Yield": "dividendYield",
+
+    "52 Week High": "fiftyTwoWeekHigh",
+
+    "52 Week Low": "fiftyTwoWeekLow",
+
+    "Analyst Recommendation": "recommendationKey",
+
+    "Analyst Rating": "averageAnalystRating",
+
+    "Target Mean Price": "targetMeanPrice",
+
+    "Target High Price": "targetHighPrice",
+
+    "Target Low Price": "targetLowPrice",
+
+    "Analyst Opinions": "numberOfAnalystOpinions"
+
+# ============================================================
 # TITLE
 # ============================================================
 
