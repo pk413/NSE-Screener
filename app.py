@@ -495,12 +495,12 @@ if "tickers" in st.session_state:
         cards = [
 
             (
-                "AI Investment Score",
+                "Investment Score",
                 f"{score}/100"
             ),
 
             (
-                "AI Recommendation",
+                "Recommendation",
                 signal
             ),
 
@@ -514,7 +514,12 @@ if "tickers" in st.session_state:
                 short_number(
                     info.get("marketCap")
                 )
+            ),
+            (
+                "Quote Type",
+                info.get("quoteType")
             )
+            
         ]
 
         for col, (title, value) in zip(
