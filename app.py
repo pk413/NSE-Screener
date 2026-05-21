@@ -434,7 +434,8 @@ KEY_METRICS = {
     "Target Low Price": "targetLowPrice",
 
     "Analyst Opinions": "numberOfAnalystOpinions"
-
+}
+    
 # ============================================================
 # TITLE
 # ============================================================
