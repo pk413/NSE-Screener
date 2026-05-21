@@ -1,7 +1,5 @@
-%%writefile app.py
-
 # ============================================================
-# ADVANCED AI NSE STOCK RESEARCH DASHBOARD
+# ADVANCED NSE STOCK RESEARCH DASHBOARD
 # ============================================================
 
 import requests
