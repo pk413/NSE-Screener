@@ -1161,6 +1161,83 @@ if "tickers" in st.session_state:
             )
 
         # ====================================================
+        # KEY METRICS
+        # ====================================================
+
+        st.markdown("""
+        <div class="section-title">
+            Decision Making Financial Metrics
+        </div>
+        """, unsafe_allow_html=True)
+
+        cols = st.columns(4)
+
+        comparison_row = {
+
+            "Ticker": ticker,
+
+            "Company": company_name,
+
+            "Investment Score": score
+        }
+
+        idx = 0
+
+        for display_name, key in KEY_METRICS.items():
+
+            value = info.get(key)
+
+            comparison_row[display_name] = value
+
+            # ================================================
+            # FORMAT VALUE
+            # ================================================
+
+            if isinstance(value, (int, float)):
+
+                if (
+                    "Growth" in display_name
+                    or "Margins" in display_name
+                    or "Yield" in display_name
+                    or "Return" in display_name
+                ):
+
+                    formatted = percent_format(value)
+
+                elif (
+                    "Ratio" in display_name
+                    or "EPS" in display_name
+                    or "Price" in display_name
+                ):
+
+                    formatted = format_indian_number(value)
+
+                else:
+
+                    formatted = short_number(value)
+
+            else:
+
+                formatted = safe_value(value)
+
+            with cols[idx % 4]:
+
+                st.markdown(f"""
+                <div class="main-card">
+                    <div class="metric-title">
+                        {display_name}
+                    </div>
+                    <div class="metric-value">
+                        {formatted}
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+            idx += 1
+
+        comparison_rows.append(comparison_row)
+        
+        # ====================================================
         # COMPANY OFFICERS
         # ====================================================
 
