@@ -98,6 +98,131 @@ except:
     pass
 
 # ============================================================
+# INDIAN NUMBER FORMAT
+# ============================================================
+
+def format_indian_number(value):
+
+    try:
+
+        if value is None:
+            return "N/A"
+
+        value = float(value)
+
+        is_negative = value < 0
+
+        value = abs(value)
+
+        integer_part = int(value)
+
+        decimal_part = value - integer_part
+
+        integer_str = str(integer_part)
+
+        if len(integer_str) > 3:
+
+            last3 = integer_str[-3:]
+
+            remaining = integer_str[:-3]
+
+            parts = []
+
+            while len(remaining) > 2:
+
+                parts.insert(0, remaining[-2:])
+
+                remaining = remaining[:-2]
+
+            if remaining:
+                parts.insert(0, remaining)
+
+            formatted = ",".join(parts) + "," + last3
+
+        else:
+
+            formatted = integer_str
+
+        if decimal_part > 0:
+
+            formatted += f"{decimal_part:.2f}"[1:]
+
+        if is_negative:
+
+            formatted = "-" + formatted
+
+        return formatted
+
+    except:
+
+        return str(value)
+
+# ============================================================
+# SHORT FORMATTER
+# ============================================================
+
+def short_number(value):
+
+    try:
+
+        if value is None:
+            return "N/A"
+
+        value = float(value)
+
+        abs_value = abs(value)
+
+        if abs_value >= 10000000:
+
+            return (
+                f"₹ "
+                f"{format_indian_number(value / 10000000)} Cr"
+            )
+
+        elif abs_value >= 100000:
+
+            return (
+                f"₹ "
+                f"{format_indian_number(value / 100000)} L"
+            )
+
+        elif abs_value >= 1000:
+
+            return (
+                f"₹ "
+                f"{format_indian_number(value / 1000)} K"
+            )
+
+        else:
+
+            return (
+                f"₹ "
+                f"{format_indian_number(value)}"
+            )
+
+    except:
+
+        return value
+
+# ============================================================
+# PERCENT FORMAT
+# ============================================================
+
+def percent_format(value):
+
+    try:
+
+        if value is None:
+            return "N/A"
+
+        return f"{value * 100:.2f}%"
+
+    except:
+
+        return value
+
+
+# ============================================================
 # FORMATTERS
 # ============================================================
 
