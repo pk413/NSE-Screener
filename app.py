@@ -569,7 +569,7 @@ KEY_METRICS = {
     "Average Volume": "averageVolume",
     "Outstanding Shares":"sharesOutstanding",
     "Insiders Hold %": "heldPercentInsiders",
-    "Institutions Hold %": "heldPercentageInstitutions",
+    "Institutions Hold %": "heldPercentInstitutions"
     
 }
     
