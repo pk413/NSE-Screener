@@ -489,6 +489,11 @@ def ai_signal(score):
 # ============================================================
 
 KEY_METRICS = {
+    "Today Open": "open",
+    "Day Low": "dayLow",
+    "Day High": "dayHigh",
+    "Previous Close": "previousClose",
+    "Volume": "volume",
 
     "Current Stock Price": "currentPrice",
 
@@ -523,6 +528,7 @@ KEY_METRICS = {
     "Return On Equity (ROE)": "returnOnEquity",
 
     "Return On Assets (ROA)": "returnOnAssets",
+    "Revenue per Share":"revenuePerShare",
 
     "Debt To Equity Ratio (D/E)": "debtToEquity",
 
@@ -537,6 +543,8 @@ KEY_METRICS = {
     "Total Revenue": "totalRevenue",
 
     "Net Income": "netIncomeToCommon",
+    "Total Cash":"totalCash",
+    "total cash per share":"totalCashPerShare",
 
     "EBITDA": "ebitda",
 
@@ -556,7 +564,13 @@ KEY_METRICS = {
 
     "Target Low Price": "targetLowPrice",
 
-    "Analyst Opinions": "numberOfAnalystOpinions"
+    "Analyst Opinions": "numberOfAnalystOpinions",
+
+    "Average Volume": "averageVolume",
+    "Outstanding Shares":"sharesOutstanding",
+    "Insiders Hold %": "heldPercentInsiders",
+    "Institutions Hold %": "heldPercentageInstitutions",
+    
 }
     
 # ============================================================
