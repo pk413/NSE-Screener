@@ -491,8 +491,7 @@ if "tickers" in st.session_state:
         # ====================================================
 
         cols = st.columns(4)
-        quote_type = safe_value(
-            info.get("quoteType")
+        quote_type = safe_value(info.get("quoteType"))
         cards = [
 
             (
