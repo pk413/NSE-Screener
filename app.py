@@ -196,7 +196,6 @@ def short_number(value):
         else:
 
             return (
-                f"₹ "
                 f"{format_indian_number(value)}"
             )
 
